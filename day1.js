@@ -1,6 +1,11 @@
+//PROBLEM: Pair of arrays with equal sum after removing exactly one element from each.
+
+//Given K arrays of different size. The task is to check if there exist any two arrays which have the same sum of elements after removing exactly one element from each of them. (Any element can be removed, but exactly one has to be removed). Print the indices of the array and the index of the removed elements if such pairs exist. If there are multiple pairs, print any one of them. If no such pairs exist, print -1.
+
+
 var arrays = [
     [1, 2],
-    [2, 3],
+    [0, 2, 3],
     [3, 4]
 ];
 
@@ -29,3 +34,6 @@ for (var i = 0; i < arrays.length; i++) {
         }
     });
 }
+
+//If no such pairs, print -1
+console.log("-1");
