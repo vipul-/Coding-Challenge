@@ -1,1 +1,1 @@
-# Sagarmatha Coding Challenge
+# Sagarmatha Weekly Coding Challenge
