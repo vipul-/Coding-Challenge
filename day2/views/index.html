@@ -7,6 +7,22 @@
     <title>Hamro Sewa</title>
 </head>
 <body>
-    
+    <% 
+        allRecords.forEach(record => {	
+    %>
+        <h5><%= record._id %></h5>
+        <%= record.name %>
+        <%= record.address %>
+        <%= record.gender %>
+        <%= record.salary %>
+        <%= record.dob %>
+        <%= record.startdate %>
+        <%= record.post %>
+        <%= record.contactno %>
+        <%= record.qualification %>
+        <a href="">Edit</a>
+    <%
+        }); 
+    %>
 </body>
 </html>

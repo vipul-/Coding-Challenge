@@ -14,7 +14,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //App routes
 app.get("/", (req, res) => {
-    res.render("index");
+    Records.find((err, allRecords) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render("index", { allRecords: allRecords });
+        }
+    });
 });
 
 app.get("/create", (req, res) => {
