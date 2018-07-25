@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hamro Sewa</title>
+</head>
+<body>
+    <% 
+        var i = 0;
+        var males = 0;
+        var females = 0;
+        allRecords.forEach(record => {	
+    %>
+        <h5><%= record._id %></h5>
+        <%= record.name %>
+        <%= record.address %>
+        <%= record.gender %>
+        <%= record.salary %>
+        <%= record.dob %>
+        <%= record.startdate %>
+        <%= record.post %>
+        <%= record.contactno %>
+        <%= record.qualification %>
+        <a href="/update/<%= record._id %>">Edit</a>
+    <%
+            if(record.gender == "male") {
+                males++;
+            } else {
+                females++;
+            }
+            i++;    
+        }); 
+    %>
+    <h3>Male Employees: <%= males %></h3>
+    <h3>Female Employees: <%= females %></h3>
+    <h3>Total Employees: <%= i %></h3>
+</body>
+</html>
