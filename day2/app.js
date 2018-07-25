@@ -23,6 +23,18 @@ app.get("/", (req, res) => {
     });
 });
 
+app.get("/update/:id", (req,res) => {
+    Records.find({ _id: req.params.id }, (err, record) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.render("update", { record: record[0] });
+        }
+    });
+});
+
+app.post("/update/:id")
+
 app.get("/create", (req, res) => {
     res.render("create");
 });
