@@ -1,0 +1,29 @@
+{
+  "name": "hamrosewa",
+  "version": "1.0.0",
+  "description": "A company named \"Hamro Sewa\" maintains a database of its employees. Database contains details about employees such as name, address, id, gender, salary, date of birth start date, post, contact number, and qualifications. Your task is to build a system to modify records of employees, count number of total employees, male and female employees in a company. System should automatically assign unique employee id that starts with 1000 and each time if a new employee is added to the database this value is incremented by 1.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vipul-/Coding-Challenge.git"
+  },
+  "keywords": [
+    "JS",
+    "MongoDB",
+    "CRUD"
+  ],
+  "author": "Vipul Chaudhary",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vipul-/Coding-Challenge/issues"
+  },
+  "homepage": "https://github.com/vipul-/Coding-Challenge#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.5"
+  }
+}
