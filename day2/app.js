@@ -23,7 +23,6 @@ app.get("/create", (req, res) => {
 
 app.post("/create", (req, res) => {
     var newRecord = {
-        _id: 1,
         name: req.body.name,
         address: req.body.address,
         gender: req.body.gender,
