@@ -1,3 +1,7 @@
+//TODO:
+    //CSS
+    //Update form -> Radio Button, date
+
 //Dependencies
 const express = require('express');
 const mongoose = require('mongoose');
@@ -33,7 +37,25 @@ app.get("/update/:id", (req,res) => {
     });
 });
 
-app.post("/update/:id")
+app.post("/update/:id", (req, res) => {
+    Records.findByIdAndUpdate(req.params.id, { 
+            name: req.body.name,
+            address: req.body.address,
+            gender: req.body.gender,
+            salary: req.body.salary,
+            dob: req.body.dob,
+            startdate: req.body.startdate,
+            post: req.body.post,
+            contactno: req.body.contactno,
+            qualifications: req.body.qualifications 
+        }, (err, updatedRecord) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.redirect("/");
+        }
+    });
+});
 
 app.get("/create", (req, res) => {
     res.render("create");
